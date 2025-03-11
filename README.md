@@ -4,7 +4,8 @@ Il s'agit du premier laboratoire du cours de réseaux et systèmes informatique.
 Pour ce premier labo nous avons du nous interesser au protocole STP (Spanning-Tree-Protocol), ce protocole permet d'éviter les boucles dans une topologie de commutateurs Ethernet. Il est défini par la norme IEEE 802.1D et est essentiel pour garantir un réseau stable et sans congestion.
 
 
-Dans un réseau avec plusieurs switchs interconnectés, une redondance est souvent mise en place pour éviter une panne en cas de défaillance d'un lien. Cependant, cette redondance peut créer des boucles de commutation, entraînant : ✅ Des tempêtes de broadcast (les trames circulent en boucle infiniment)
+Dans un réseau avec plusieurs switchs interconnectés, une redondance est souvent mise en place pour éviter une panne en cas de défaillance d'un lien. Cependant, cette redondance peut créer des boucles de commutation, entraînant : 
+✅ Des tempêtes de broadcast (les trames circulent en boucle infiniment)
 ✅ Une saturation du réseau (les switchs deviennent inutilisables)
 ✅ Une duplication des paquets (perturbant la communication des équipements)
 

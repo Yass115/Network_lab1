@@ -10,6 +10,8 @@ Dans un réseau avec plusieurs switchs interconnectés, une redondance est souve
 
 Le STP permet d’éliminer ces boucles en désactivant temporairement certains liens redondants.
 
+Le but de ce laboratoire est d'analyser le protocole STP, d'effectuer les opération du protocole à la main et ensuite de comparer ce que nous avons obtenu avec une simulation sur Cisco Packet Tracer
+
 # Fonctionnement de STP
 
 ### 1- On trouve le switch root graçe à l'identité (Numéro de priorité qui par défaut est à 32768 + Adresse MAC)

@@ -32,7 +32,8 @@ Le but est d'utiliser le protocole STP à lamain, voir ce que l'on obtient et le
 ![Premier exercice](ex_1.png)
 
 et voici le deuxième exercice
-![Description de l'image](ex_2.png)
+<img src="ex_2.png" alt="Exercice 2" width="400">
+
 
 
 

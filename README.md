@@ -27,6 +27,10 @@ Dans un segment ou il y a le port d'une switch root alors le port de la switch r
 
 Tous les ports roots ainsi que les ports designés sont en Forwarding les ports restants sont en Block et donc si sur un segment les 2 ports sont en forwarding alors la communication se fait sans soucis mais si jamais sur un segment on a un port en block et le 2e en Forwarding alors ce segement est "coupé" artificiellement.
 
+## Exercices de la séance de laboratoire
+Le but est d'utiliser le protocole STP à lamain, voir ce que l'on obtient et le comparer avec la simulation sur cisco packet tracer
+![Premier exercice](ex_1.png)
+
 
 # Améliorations de STP
 

@@ -35,6 +35,8 @@ Le but est d'utiliser le protocole STP à lamain, voir ce que l'on obtient et le
 et voici le deuxième exercice
 ![Exercice 2](ex_2.png)
 
+En vert il y a tous les ports en Forwarding et en orange c'est tous les ports "bloqués" par le protocol STP donc si sur un segment il y a du vert et de l'orange alors le segment est artificiellement coupé, donc celà implique qu'aucune donnée ne passera par là.
+
 
 #### Solution Cisco Packet Tracer
 

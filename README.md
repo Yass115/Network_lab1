@@ -12,16 +12,16 @@ Le STP permet d’éliminer ces boucles en désactivant temporairement certains 
 
 # Fonctionnement de STP
 
-## 1- On trouve le switch root graçe à l'identité (Numéro de priorité qui par défaut est à 32768 + Adresse MAC)
+### 1- On trouve le switch root graçe à l'identité (Numéro de priorité qui par défaut est à 32768 + Adresse MAC)
 Le root sera celui qui possède l'identitée la plus petite
 
-## 2- On doit ensuite trouver le root Port
+### 2- On doit ensuite trouver le root Port
 Le root port on le trouve en calculant pour chaque interface (port) quel est le chemin qu'il effectue avant d'arriver au switch root en en calculant le cout cumulé (si le cout cumulé est le meme pour deux chemins differents alors on regarde le numéro d'identification des ports voisins (exemple: Fa0/1 > Fa0/0) et on prends celui qui a le plus petit numéro d'identification (on doit définir un RP pour chaque switch)
 
-## 3- On doit trouver le Port designé pour chaque segment
+### 3- On doit trouver le Port designé pour chaque segment
 Dans un segment ou il y a le port d'une switch root alors le port de la switch root est d'office un port designé, si c'est des ports normaux alors on se place au milieu du segment (Attention on ne compte pas le segments sur lequel on est placé) et on regarde vers quel port lechein est le plus court vers le switch root (à nouveau si deux chemins sont les memes alors on regarde l'addresse MAC et on prends la plus petite)
 
-## 4- Identification des ports en Forwarding et Block
+### 4- Identification des ports en Forwarding et Block
 
 Tous les ports roots ainsi que les ports designés sont en Forwarding les ports restants sont en Block et donc si sur un segment les 2 ports sont en forwarding alors la communication se fait sans soucis mais si jamais sur un segment on a un port en block et le 2e en Forwarding alors ce segement est "coupé" artificiellement.
 

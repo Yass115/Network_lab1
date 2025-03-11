@@ -31,8 +31,12 @@ Tous les ports roots ainsi que les ports designés sont en Forwarding les ports 
 Le but est d'utiliser le protocole STP à lamain, voir ce que l'on obtient et le comparer avec la simulation sur cisco packet tracer
 ![Premier exercice](ex_1.png)
 
+et voici le deuxième exercice
+![Description de l'image](ex_2.png)
 
-# Améliorations de STP
+
+
+# Les Améliorations de STP
 
 1- RSTP (Rapid Spanning Tree Protocol - IEEE 802.1w) : Version plus rapide qui réduit le temps de convergence.
 2- MSTP (Multiple Spanning Tree Protocol - IEEE 802.1s) : Permet de gérer plusieurs VLANs sur un même réseau STP.

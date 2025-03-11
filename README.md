@@ -29,10 +29,11 @@ Tous les ports roots ainsi que les ports designés sont en Forwarding les ports 
 
 ## Exercices de la séance de laboratoire
 Le but est d'utiliser le protocole STP à lamain, voir ce que l'on obtient et le comparer avec la simulation sur cisco packet tracer
-<img src="ex_1.png" alt="Exercice 1" width="600">
+![Exercice 1](ex_1.png)
+
 
 et voici le deuxième exercice
-<img src="ex_2.png" alt="Exercice 2" width="600">
+![Exercice 2](ex_2.png)
 
 
 

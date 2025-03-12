@@ -1,4 +1,4 @@
-# Aide e résolution du Laboratoire n°1 :
+# Aide pour la résolution du Laboratoire n°1 :
 
 Essayez d'effectuer le laboratoire et si jamais après avoir buté dessus durant pas mal de temps vous êtes bloqués alors venez checker la correction.
 

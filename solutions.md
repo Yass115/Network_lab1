@@ -14,11 +14,11 @@ Essayez d'effectuer le laboratoire et si jamais après avoir buté dessus durant
 
 # Quelques commandes intéressantes
 
-1 - Afficher l'adresse MAC du switch lui-même (Cette commande affiche l’adresse MAC du switch, souvent appelée Base Ethernet MAC Address) => **show version**
-2 - Afficher la table des adresses MAC apprises par le switch => **show mac address-table**
+1. Afficher l'adresse MAC du switch lui-même (Cette commande affiche l’adresse MAC du switch, souvent appelée Base Ethernet MAC Address) => **show version**
+2. Afficher la table des adresses MAC apprises par le switch => **show mac address-table**
   * Variante pour voir les adresses MAC dynamiques uniquement => **show mac address-table dynamic**
   *  Filtrer par un port spécifique => **show mac address-table interface fastEthernet 0/1**
-3 - Vérifier l'adresse MAC d'une interface spécifique du switch => **show interfaces fastEthernet 0/1**
+3. Vérifier l'adresse MAC d'une interface spécifique du switch => **show interfaces fastEthernet 0/1**
 
 
 

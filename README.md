@@ -44,6 +44,110 @@ En vert il y a tous les ports en Forwarding et en orange c'est tous les ports "b
 Si tout se passe bien voici à quoi votre "architecture devrait ressembler:
 ![Architecture sur cisco](labo_1.png)
 
+Mettre en place **STP (Spanning Tree Protocol)** sur Cisco permet d’éviter les **boucles réseau** lorsqu’il y a des connexions redondantes entre les switches.
+
+---
+
+## 🧠 Rappel rapide :
+
+* STP est **activé par défaut** sur la plupart des switches Cisco.
+* Il **désactive automatiquement les ports redondants** pour éviter les boucles.
+* Il élit un **Root Bridge** (switch de référence) basé sur le **Bridge ID (priorité + MAC)**.
+
+---
+
+## ✅ ÉTAPES POUR METTRE EN PLACE STP SUR CISCO
+
+### 🎯 Objectif : définir un switch comme **Root Bridge**, voir l’état des ports STP, et assurer la redondance sans boucle.
+
+---
+
+### 🔹 1. **Vérifier que STP est actif**
+
+Sur **chaque switch** :
+
+```bash
+show spanning-tree
+```
+
+Tu verras :
+
+* Le VLAN
+* Le rôle de chaque port (Root, Designated, Blocking)
+* Le Root Bridge
+
+---
+
+### 🔹 2. **Définir manuellement un Root Bridge (important)**
+
+Sur le **switch que tu veux comme Root**, utilise une **priorité plus basse** :
+
+```bash
+configure terminal
+spanning-tree vlan 1 priority 4096
+exit
+```
+
+> Par défaut, la priorité est `32768`. Plus elle est basse, plus le switch a de chances d’être élu root.
+
+---
+
+### 🔹 3. (Optionnel) Configurer les autres switches avec une priorité plus haute
+
+```bash
+configure terminal
+spanning-tree vlan 1 priority 32768
+exit
+```
+
+---
+
+### 🔹 4. **Voir l’état du STP après configuration**
+
+```bash
+show spanning-tree
+```
+
+* Tu verras si le switch est devenu **Root Bridge**
+* Tu verras quel port est en **Blocking** pour couper la boucle
+
+---
+
+### 🔹 5. (Optionnel) Configurer **PortFast** sur les ports vers les PC (pour éviter les délais STP)
+
+```bash
+interface range fa0/1 - 24
+spanning-tree portfast
+exit
+```
+
+> ⚠️ Ne jamais activer **PortFast** sur des liens entre switches.
+
+---
+
+### 🔹 6. Sauvegarder la configuration
+
+```bash
+write memory
+```
+
+---
+
+## 🔁 TOPOLOGIE TYPIQUE AVEC REDONDANCE
+
+```
+     [SW1]
+     /   \
+ [SW2]---[SW3]
+
+→ SW1 élu Root Bridge  
+→ STP bloque un lien pour éviter boucle  
+→ Si un lien tombe, STP réactive un autre automatiquement.
+```
+
+---
+
+Souhaites-tu un exemple de configuration complet pour 3 switches avec redondance STP ?
 
 # Les Améliorations de STP
 
